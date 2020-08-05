@@ -162,6 +162,12 @@ type MetaObject = {
 
 type Meta = StaticallyTypedRecord<MetaObject>;
 
+type i18n = StaticallyTypedRecord<{
+  structure: string;
+  locales: List<string>;
+  default_locale: string;
+}>;
+
 type CollectionObject = {
   name: string;
   folder?: string;
@@ -190,7 +196,7 @@ type CollectionObject = {
   meta?: Meta;
   locales?: List<string>;
   default_locale?: string;
-  i18n_structure?: string;
+  i18n: i18n;
 };
 
 export type Collection = StaticallyTypedRecord<CollectionObject>;
