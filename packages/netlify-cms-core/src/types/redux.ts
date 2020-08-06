@@ -163,7 +163,7 @@ type Meta = StaticallyTypedRecord<MetaObject>;
 
 type i18n = StaticallyTypedRecord<{
   structure: string;
-  locales: List<string>;
+  locales: string[];
   default_locale: string;
 }>;
 
